@@ -130,7 +130,7 @@ function multiply (x: number, y: number) {
   return x * y;
 }
 
-let z = multiptly(4, 5);
+let z = multiply(4, 5);
 console.log(z);
 ```
 {% endcode-tabs-item %}
