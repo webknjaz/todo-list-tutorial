@@ -34,7 +34,7 @@ Plugins help the IDE understand the code. Webstorm ships with the necessary plug
 
 ## NodeJS and NPM
 
-**Please check the **[**Angular CLI docs**](https://github.com/angular/angular-cli#prerequisites)** for the up-to-date prerequisites \(NodeJS and NPM versions\)!**
+**Please check the** [**Angular CLI docs**](https://github.com/angular/angular-cli#prerequisites) **for the up-to-date prerequisites \(NodeJS and NPM versions\)!**
 
 Another tool which most web developers are using is **NodeJS**. Once installed, it comes with another tool called **NPM** \(Node Package Manager\).
 
@@ -42,7 +42,7 @@ NodeJS lets you run JavaScript code on your computer. It is used to run a local 
 
 NPM allows you to easily download and install different libraries from the internet and manage their versions.
 
-**Download NodeJS **[**here**](https://nodejs.org/en/)**.**
+**Download NodeJS** [**here**](https://nodejs.org/en/)**.**
 
 If you already have NodeJS installed, make sure you check that the version matches the prerequisites by running this in your command line / terminal:
 

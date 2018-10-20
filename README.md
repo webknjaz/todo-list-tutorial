@@ -8,7 +8,7 @@ This tutorial will take you step by step on how to create your own todo list app
 
 ### [StackBlitz version - use an online editor](https://ng-girls.gitbook.io/todo-list-tutorial/v/stackblitz/)
 
-This tutorial is open source and is written by the community. Please feel free to send any suggestions and pull requests. Special thanks to the members of** Angular AfterHours meetup group **for kickstarting this tutorial during a [special meetup event](http://www.meetup.com/Angular-AfterHours/events/235151422/)!
+This tutorial is open source and is written by the community. Please feel free to send any suggestions and pull requests. Special thanks to the members of **Angular AfterHours meetup group** for kickstarting this tutorial during a [special meetup event](http://www.meetup.com/Angular-AfterHours/events/235151422/)!
 
 The tutorial is used in the [ngGirls](http://ng-girls.org) workshops. You are welcome to use it in your own workshop and we'd love to hear about it! Write to us: [info@ng-girls.org](mailto:info@ng-girls.org).
 
