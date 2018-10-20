@@ -47,7 +47,7 @@ changeTitle(newTitle: string) {
 We delegate everything to the parent component - even actually changing the title of the item if needed.
 
 We pass `newTitle` when we emit the event. Whatever we pass in `emit()` will be available for the parent as `$event`.
-
+//line 51: no mention of `todo-input` component in tutorial might be `todo-item` or `input-button-unit`
 Nothing else is changed in the `todo-input` component. The events emitted from `keyup.enter` and `click` still call the same method, but the method itself has changed.
 
 The method name may seem irrelevant right now. Let's change it to something more appropriate: `submitValue`. You can use the IDE tools to refactor the method name - make sure that it is changed in the template as well.
@@ -80,7 +80,7 @@ template: `
 
 ### Listening to the event
 
-Now all we need to do is catch the event in the parent component and attach logic to it. Go to the `app-root` component and bind to the `submit` event in the `<app-input-butoon-unit>` component:
+Now all we need to do is catch the event in the parent component and attach logic to it. Go to the `app-root` component and bind to the `submit` event in the `<app-input-button-unit>` component:
 
 {% code-tabs %}
 {% code-tabs-item title="src/app/app.component.ts" %}
