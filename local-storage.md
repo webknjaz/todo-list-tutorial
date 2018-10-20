@@ -159,6 +159,7 @@ export class TodoListService {
   todoList: TodoItem[];
 
   constructor(private storageService: StorageService) { }
+}
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
