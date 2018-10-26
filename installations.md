@@ -46,9 +46,13 @@ NPM allows you to easily download and install different libraries from the inter
 
 If you already have NodeJS installed, make sure you check that the version matches the prerequisites by running this in your command line / terminal:
 
+{% code-tabs %}
+{% code-tabs-item title="command-line" %}
 ```text
 node -v
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 \('-v' stands for 'version'.\)
 
@@ -56,9 +60,13 @@ If it's lower than required, you need to be careful installing a new version, si
 
 Once installed, you should also have NPM installed. Check its version by running:
 
+{% code-tabs %}
+{% code-tabs-item title="command-line" %}
 ```text
 npm -v
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 ## Git
 
@@ -75,9 +83,13 @@ When asked if you'd like to install **git bash**, say yes.
 
 The [Angular CLI](https://github.com/angular/angular-cli) is a powerful tool that simplifies a lot of the development process. It also installs libraries you'll use in your current and future projects. Install it by running:
 
+{% code-tabs %}
+{% code-tabs-item title="command-line" %}
 ```text
 npm i -g @angular/cli
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 This command runs the NPM we recently installed here - it knows where to find the package \(angular-cli\) you're looking for by the name of the package you provide. the 'i' parameter, is a short form of 'install'. the '-g' parameter, stands for the word 'global' - we'd like to have this tool globally installed on the computer, so that we could use it from any folder to create any future projects.
 
@@ -87,35 +99,51 @@ Read more about the Angular CLI in the following section.
 
 First, create a folder to store all your projects, for example _myProjects_, and then go into the folder, using a terminal \(command line window\):
 
+{% code-tabs %}
+{% code-tabs-item title="command-line" %}
 ```text
 cd the-path-to-your-folder/myProjects
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 Now, create a new project, called _todo-list_ inside the projects folder, using the Angular CLI, by running the following command:
 
+{% code-tabs %}
+{% code-tabs-item title="command-line" %}
 ```text
 ng new todo-list
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 This can take a while, since many packages are being downloaded from the web and installed.
 
 Now enter the new folder that the Angular CLI created for this project:
 
+{% code-tabs %}
+{% code-tabs-item title="command-line" %}
 ```text
 cd todo-list
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 Once inside the folder of the application, run the application by using the following command:
 
-```text
+{% code-tabs %}
+{% code-tabs-item title="command-line" %}
+```bash
 ng serve -o
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 The flag `-o` is a short for `--open`, which will open your browser in the right URL: [`localhost:4200`](http://localhost:4200)
 
 You should see the page like this:
 
-![Initial App](https://github.com/ng-girls/todo-list-tutorial/raw/master/assets/initial-app.png)
+![start screen. welcome message depends on project name](.gitbook/assets/181026-todo-list-start-screen.jpg)
 
 ## Congratulations!
 
