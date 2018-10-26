@@ -1,4 +1,4 @@
-# The To Do list
+# \#9: 📋 The To Do list
 
 Now you are going to add the to do list itself to the component `app-root`. Open the file `src/app/app.component.ts`. Add the list of items inside the `AppComponent` class as an array of objects for each item. At this stage, each item only contains a title:
 

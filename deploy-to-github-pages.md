@@ -1,4 +1,4 @@
-# Deploy to GitHub Pages
+# \#20: 🛰 Deploy to GitHub Pages
 
 This is an old version - we should check this :\)
 

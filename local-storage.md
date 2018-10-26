@@ -1,4 +1,4 @@
-# Local storage
+# \#17: 💾Local storage
 
 We would like to persist the todo list on our computer, so that when accessing or reloading the app we'll see the list with the changes we've made. Ideally the list would be saved in a database, but we will implement a simple version using the browser's own storage. 
 

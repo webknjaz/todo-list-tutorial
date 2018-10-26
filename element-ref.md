@@ -1,4 +1,4 @@
-# Element ref - \#
+# \#8: 📎 Element ref - \#
 
 In the last chapter, we ended with our input component able to display and change the title of our todo item. `input.component.ts` should look like this:
 
