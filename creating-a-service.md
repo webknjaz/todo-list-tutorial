@@ -105,7 +105,7 @@ import { TodoItem } from '../interfaces/todo-item';
 @Injectable()
 export class TodoListService {
 
-  private todoList = [
+  private todoList: TodoItem[] = [
     {title: 'install NodeJS'},
     {title: 'install Angular CLI'},
     {title: 'create new app'},
