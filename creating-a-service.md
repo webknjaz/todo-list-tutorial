@@ -15,7 +15,9 @@ This command will generate the service in the file `src/app/services/todo-list.s
 ```text
 import { Injectable } from '@angular/core';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class TodoListService {
 
   constructor() { }
@@ -102,7 +104,9 @@ We'll add a `getTodoList` method that will return the `todoList` array. The serv
 import { Injectable } from '@angular/core';
 import { TodoItem } from '../interfaces/todo-item';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class TodoListService {
 
   private todoList = [
