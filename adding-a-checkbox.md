@@ -59,7 +59,7 @@ But wait! How is any of this going to affect the todo title when we're only touc
 
 The 'first' and 'second' class will be applied to the element because they are given a true value, whereas the 'third' class will not be applied because it is given a false value. So this is where our earlier code comes into play. Our `completeItem` method will toggle between true and false values, thus dictating whether a class should be applied or removed.
 
-Let's wrap the item title in a `<span>`, then use NgClass to apply the styling:
+Let's wrap the item title in a `<span>`, then use NgClass to apply the styling. Depending on current item completed field we show line-through decoration or not:
 
 ```markup
 <span class="todo-title" [ngClass]="{'todo-complete': item.completed}">
@@ -74,6 +74,36 @@ And finally, add the CSS to our `todo-item.component.css` file:
     text-decoration: line-through;
   }
 ```
-
+Next step is to tell the parent element list-manager what to do, when update event is emitted. In order to do so we have to bind update action and update method that will trigger a proper function in TodoListService.
+So we apply here:
+{% code-tabs %}
+{% code-tabs-item title="src/app/list-manager/list-manager.component.ts" %}
+```markup
+<app-todo-item [item]="todoItem"
+               (remove)="removeItem($event)"></app-todo-item>
+</div>
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+Next modifications:
+{% code-tabs %}
+{% code-tabs-item title="src/app/list-manager/list-manager.component.ts" %}
+```markup
+<app-todo-item [item]="todoItem"
+             (remove)="removeItem($event)"
+             (update)="updateItem($event.item, $event.changes)"></app-todo-item>
+</div>
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+And create additional method to handle this update item event. Very similar to removeItem function:
+{% code-tabs %}
+{% code-tabs-item title="src/app/list-manager/list-manager.component.ts" %}
+```markup
+updateItem(item, changes) {
+  this.todoListService.updateItem(item, changes);
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 Voila! Checking the checkbox should apply a line through the todo title, and unchecking the checkbox should remove the line.
-
