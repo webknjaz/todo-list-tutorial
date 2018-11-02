@@ -62,7 +62,7 @@ The 'first' and 'second' class will be applied to the element because they are g
 Let's wrap the item title in a `<span>`, then use NgClass to apply the styling:
 
 ```markup
-<span class="todo-title" [ngClass]="{'todo-complete': isComplete}">
+<span class="todo-title" [ngClass]="{'todo-complete': item.completed}">
   {{ item.title }}
 </span>
 ```
