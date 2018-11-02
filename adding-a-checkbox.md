@@ -67,7 +67,7 @@ Let's wrap the item title in a `<span>`, then use NgClass to apply the styling:
 </span>
 ```
 
-And finally, add the CSS to our `item.component.css` file:
+And finally, add the CSS to our `todo-item.component.css` file:
 
 ```css
   .todo-complete {
