@@ -18,16 +18,16 @@ import { Component, OnInit } from '@angular/core';
       input-button-unit works!
       The title is: {{ title }}
     </p>
-    
+
     <input [value]="title">
     <button>Save</button>
-  `,  
-  styleUrls: ['./input-button-unit.component.css']  
-})    
+  `,
+  styleUrls: ['./input-button-unit.component.css']
+})
 export class InputButtonUnitComponent implements OnInit {
-  title = 'Hello World';           
+  title = 'Hello World';
 
-  constructor() { }                     
+  constructor() { }
 
   ngOnInit() {
   }
@@ -64,7 +64,7 @@ template: `
     input-button-unit works!
     The title is: {{ title }}
   </p>
-  
+
   <input [value]="title">
   <button (click)="changeTitle('Button Clicked!')">
     Save
@@ -82,7 +82,7 @@ Go to the browser and see the result - click on the Save button.
 
 We pass a static string to the method call: `Button Clicked!'` But we want to pass the value that the user typed in the input box!
 
-In the next chapter we will learn how to use properties of one element in another element in the same template. Then we'll be able to complete the implementation of the click event of the `Save` button.  
+In the next chapter we will learn how to use properties of one element in another element in the same template. Then we'll be able to complete the implementation of the click event of the `Save` button.
 But now we'll bind a method to an event on the input element: when the user clicks Enter, the method `changeTitle` will be called.
 
 ### 'keyup' event
@@ -104,7 +104,7 @@ Now when the user types in the input box, the title is changed to "Button Clicke
 {% code-tabs %}
 {% code-tabs-item title="src/app/input-button-unit/input-button-unit.component.ts" %}
 ```markup
-<input [value]="title" 
+<input [value]="title"
        (keyup)="changeTitle('Button Clicked!')">
 ```
 {% endcode-tabs-item %}
@@ -119,7 +119,7 @@ The event object emitted on `keyup` events has a reference to the element that e
 {% code-tabs %}
 {% code-tabs-item title="src/app/input-button-unit/input-button-unit.component.ts" %}
 ```markup
-<input [value]="title" 
+<input [value]="title"
        (keyup)="changeTitle($event.target.value)">
 ```
 {% endcode-tabs-item %}
@@ -134,7 +134,7 @@ You can limit the change to only a special key stroke, in our case it's the Ente
 {% code-tabs %}
 {% code-tabs-item title="src/app/input-button-unit/input-button-unit.component.ts" %}
 ```markup
-<input [value]="title" 
+<input [value]="title"
        (keyup.enter)="changeTitle($event.target.value)">
 ```
 {% endcode-tabs-item %}
@@ -164,25 +164,13 @@ Now change the argument you're passing in the template, to pass the whole `$even
 {% code-tabs %}
 {% code-tabs-item title="src/app/input-button-unit/input-button-unit.component.ts" %}
 ```markup
-<input [value]="title" 
+<input [value]="title"
        (keyup.enter)="changeTitle($event)">
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
 Try it out!
-
-You can do the same with the `button` element:
-
-{% code-tabs %}
-{% code-tabs-item title="src/app/input-button-unit/input-button-unit.component.ts" %}
-```markup
-  <button (click)="changeTitle($event)">
-    Save
-  </button>
-```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 **Don't forget to change back the code before we go on!**
 
@@ -198,24 +186,24 @@ import { Component, OnInit } from '@angular/core';
       input-button-unit works!
       The title is: {{ title }}
     </p>
-    
-    <input [value]="title" 
+
+    <input [value]="title"
            (keyup.enter)="changeTitle($event.target.value)">
-       
+
     <button (click)="changeTitle('Button Clicked!')">
       Save
     </button>
-  `,  
-  styleUrls: ['./input-button-unit.component.css']  
-})    
+  `,
+  styleUrls: ['./input-button-unit.component.css']
+})
 export class InputButtonUnitComponent implements OnInit {
-  title = 'Hello World';           
+  title = 'Hello World';
 
-  constructor() { }                     
+  constructor() { }
 
   ngOnInit() {
   }
-  
+
   changeTitle(newTitle: string) {
     this.title = newTitle;
   }
