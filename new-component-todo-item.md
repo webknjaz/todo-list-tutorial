@@ -42,7 +42,14 @@ Inside the newly generated `TodoItemComponent` class in `todo-item.component.ts`
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-It tells the component to expect an input and to assign it to the class member called `item`. Make sure that `Input` is added to the `import` statement in the first line in the file. Now we can use it inside the `todo-item` template and extract the item's title with interpolation: `{{ item.title }}`
+It tells the component to expect an input of type string and to assign it to the class member called `itemTitle`.
+**Make sure that `Input` is added to the import statement in the first line in the file**.
+
+ ```js
+import { Component, OnInit, Input } from '@angular/core';
+
+
+Now we can use it inside the `todo-item` template and extract the item's title with interpolation: `{{ item.title }}`
 
 The component should look like this now:
 
